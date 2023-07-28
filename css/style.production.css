@@ -340,7 +340,7 @@ button:focus,
 
 @media all and (max-width: 750px) {
 	.showcase {
-		grid-gap:10px;
+		grid-gap: 10px;
 	}
 
 	.showcase_item:last-child {
