@@ -1,0 +1,272 @@
+:root {
+	--background-color: rgba(229, 240, 249, 0.703);
+	--primary-color: rgba(19, 70, 170, 0.2);
+	--secondary-color: #862001;
+	--visited-color:#4a008b;
+	--active-color:#0294c4;
+	--focus-color:rgb(0, 39, 231);
+	--showcase-color:rgba(178, 191, 234, 0.945);
+	--key-color-start:#edc655;
+	--key-color-mid:#fcffad;
+	--key-color-finish:#f76414;
+	--border-color:rgba(0, 36, 109, 0.2);
+	--font-base: 16px;
+
+	
+  }
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Luxurious Roman', cursive;
+	font-weight: 400;
+	font-size: var(--font-base);
+	/*this sets the font size*/
+	line-height: 1.3;
+	/*this sets the line-height*/
+	background-color: var(--background-color);
+}
+
+h1 {
+	font-size: 30px;
+	font-weight: 400;
+}
+  
+h2 {
+	font-size: 24px;
+	font-weight: 400;
+}
+  
+h3 {
+	font-size: 18px;
+	font-weight: 400;
+}
+
+p {
+	font-size: var(--font-base);
+	font-weight:400;
+}
+
+
+.page-header {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	padding: 20px;
+	border-bottom: 3px solid var(--primary-color);
+  }
+
+  .page-header__item {
+	flex: 0 1 200px;
+  }
+  
+  .page-header .page-header__item:last-child {
+	flex-grow: 1;
+	text-align: right;
+  }
+  
+  .navigation-list {
+	list-style-type: none;
+  }
+  
+  .navigation-list li {
+	display: inline-block;
+	margin-left: 15px;
+  }
+
+.profile {
+	max-width: 700px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.profile_portrait {
+	float:left;
+	max-width: 250px;
+	margin-right: 40px;
+	height: auto;
+	border-radius: 50%;
+}
+
+.navigation-list__item--active {
+	text-decoration: none;
+  }
+
+a {
+	color:var(--secondary-color);
+}
+
+.showcase_item {
+	display:inline-block;
+	width: 33%;
+}
+
+.about-main {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+
+}
+
+.about-main_item {
+	margin: auto;
+    justify-content: center;
+}
+
+#about-picture {
+	margin: auto;
+	max-width: 40%;
+}
+
+svg * {
+	transform-box: fill-box;
+}
+
+@keyframes color-change {
+	0% {
+	  fill: var(--key-color-start)
+	}
+	50% {
+	  fill: var(--key-color-mid);
+	}
+	100% {
+	  fill: var(--key-color-finish);
+	}
+}
+
+.sun {
+	animation: 4s color-change infinite alternate linear;
+}
+
+@keyframes cloud-move {
+	from {
+	  transform: translate(0, 50px);
+	}
+	to {
+	  transform: translate(200px, 50px);
+	}
+}
+
+.cloud-front {
+	animation: 30s cloud-move infinite alternate linear;
+}
+
+
+@keyframes cloud-move-reverse {
+	from {
+	  transform: translate(446px, 48px);
+	}
+	to {
+	  transform: translate(100px, 48px);
+	}
+}
+
+.cloud-back {
+	animation: 34s cloud-move-reverse infinite alternate linear;
+}
+
+@supports (display: grid) {
+	.showcase {
+		display:grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-gap: 20px;
+		margin: 0;
+	}
+
+
+	.showcase_item {
+		background-color: var(--showcase-color);
+		width:auto;
+		min-height: auto;
+		margin: 0;
+	}
+
+	.showcase_item:last-child {
+		grid-column: 3/3;
+		grid-row: 1/3;
+	}
+}
+
+a:visited {
+	/*visited link */
+	color: var(--visited-color);
+}
+
+a:hover {
+	/*No underlining when hovering over a link*/
+	text-decoration:none;
+}
+
+a:active {
+	/* selected link */
+	color: var(--active-color);
+}
+
+a:focus {
+	/*boxes in and highlights a link when selected by the keyboard*/
+	color:var(--focus-color);
+}
+
+button,
+.button {
+	border: none;
+	display:inline-block;
+	font-family: inherit;
+	background-color: var(--primary-color);
+	color: var(--secondary-color);
+	text-decoration: none;
+	padding: 10px;
+	border-radius: 3px;
+	border-bottom: 2px solid var(--border-color);
+	transition: opacity 0.7s;
+}
+
+button:hover, 
+button:focus,
+.button:hover,
+.button:focus {
+	cursor: pointer;
+	opacity: 0.8;
+}
+
+.page-footer {
+	clear:both;
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+}
+
+.footer-social_links {
+	flex: 1 1 200px;
+}
+
+@media all and (max-width: 500px) {
+	.showcase {
+		grid-template-columns: 1fr;
+	}
+}
+
+@media all and (min-width: 500px) and (max-width: 750px) {
+	.showcase {
+		grid-template-columns: 1fr 1fr;
+	}
+}
+
+@media all and (max-width: 750px) {
+	.showcase {
+		grid-gap:10px;
+	}
+
+	.showcase_item:last-child {
+		grid-column: auto/auto;
+		grid-row: auto/auto;
+	}
+
+	h1 {
+		font-size:22px;
+	}
+}

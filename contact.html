@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- will be your contact webpage-->
+<!--make sure to use BEM or block-element__modifier when making classes-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Luxurious+Roman&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" type="image/png" href="img/favicon-32x32.png">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/style.production.css">
+</head>
+<body>
+    <header class="page-header">
+        <img src="img/michaels_page_logo.jpg" alt="A logo with a blue background and white lettering, M K in white with the name Michael Kovalyak underneath" class="page-header_item">
+        <nav>
+            <ul role="menubar" class="navigation-list page-header_item">
+               <li role="presentation">
+                  <a href="index.html" role="menuitem" class="navigation-list__item"
+                  >Home</a>
+               </li>
+               <li role="presentation">
+                  <a href="about-me.html" role="menuitem" class="navigation-list__item"
+                  >About me</a>
+               </li>
+              <li role="presentation">
+                  <a href="contact.html" role="menuitem" class="navigation-list__item 
+                  navigation-list__item--active">Contact</a>
+               </li>
+               <li role="presentation">
+                <a href="work.html" role="menuitem" class="navigation-list__item">Work</a>
+               </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <p>Feel free to contact me by either e-mail, phone, or by using the link below.        </p>
+        <a href="mailto:youknowwho@where.com">Contact me</a>
+        <br>
+        <a href="tel:+1(234)567-8910">Telephone: +1(234)567-8910</a>
+        <br>
+        <a href="mailto:youknowwho@where.com">E-mail: youknowwho@where.com</a>
+        <br>
+        <p>You can also submit your e-mail or phone number with a brief message and I will respond as soon as possible!</p>
+        <form action="#" method="post">
+            <label class="standard-label" for="contact-email">E-mail: </label>
+            <input type="email" id="contact-email" required>
+
+            <label class="standard-label" for="contact-telephone">Telephone: </label>
+            <input type="tel" id="contact-telephone" pattern="\d{3}[\-]d{3}[\-]\d{4}">
+
+            <label class="standard-label" for="contact-message">Message: </label>
+            <textarea  id="contact-message" maxlength="240" required></textarea>
+            <input type="submit" value="Send message">
+        </form>
+    </main>
+    <footer class="page-footer">
+        <p class="footer-social">Find me on</p>
+        <div class="footer-social_links">
+            <img src="img/github_icon.svg" width="30" height="30" alt="Github">
+            <img src="img/twitter_icon.svg" width="30" height="30" alt="Twitter">
+            <img src="img/linkedin_icon.svg" width="30" height="30" alt="LinkedIn">
+        </div>
+<!--Since it's "bad code" to add design features in html, it might 
+be a good idea to put the max height and width in the css file -->
+    </footer>
+    <a href="#">Back to top</a>
+<script src="js/tota11y.min.js"></script>
+</body>
+</html>
