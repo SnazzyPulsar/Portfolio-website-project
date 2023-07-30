@@ -20,6 +20,8 @@ body {
 	background: -webkit-gradient(linear,  left top, left bottom,  from(rgba(239, 248, 254, 0.959)),color-stop(47%, rgba(202,234,254,1)),to(rgba(162,217,254,1)));
 	background: -o-linear-gradient(top,  rgba(239, 248, 254, 0.959) 0%,rgba(202,234,254,1) 47%,rgba(162,217,254,1) 100%);
 	background: linear-gradient(to bottom,  rgba(239, 248, 254, 0.959) 0%,rgba(202,234,254,1) 47%,rgba(162,217,254,1) 100%);
+	border: 4px solid;
+	border-color: rgba(58,139,194,1);
 
 }
 
@@ -54,7 +56,8 @@ p {
 	        justify-content: space-between;
 	width: 100%;
 	padding: 20px;
-	border-bottom: 3px solid rgba(19, 70, 170, 0.2);
+	border-bottom: 4px solid;
+	border-color: rgba(58,139,194,1);
   }
 
   .page-header__item {
@@ -281,7 +284,7 @@ button {
 	text-decoration: none;
 	padding: 10px;
 	border-radius: 3px;
-	border-bottom: 2px solid rgba(0, 36, 109, 0.2);
+	border-bottom: 2px solid rgba(58,139,194,1);
 	-webkit-transition: opacity 0.7s;
 	-o-transition: opacity 0.7s;
 	transition: opacity 0.7s;
@@ -296,7 +299,7 @@ button {
 	text-decoration: none;
 	padding: 10px;
 	border-radius: 3px;
-	border-bottom: 2px solid rgba(0, 36, 109, 0.2);
+	border-bottom: 2px solid rgba(58,139,194,1);
 	-webkit-transition: opacity 0.7s;
 	-o-transition: opacity 0.7s;
 	transition: opacity 0.7s;
