@@ -1,1 +1,3 @@
 stylelint.config.js
+*.scss
+tota11y.min.js
